@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 - Студент: [Кристина Носкова](https://up.htmlacademy.ru/adaptive/30/user/2235875).
-- Наставник: [Олег Цыганов] (https://htmlacademy.ru/profile/olegtsyganov).
+- Наставник: [Олег Цыганов](https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
