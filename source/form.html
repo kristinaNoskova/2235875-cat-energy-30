@@ -44,15 +44,16 @@
           программу питания для вашего кота</p>
         <form class="program__form program-form" method="get" action="https://echo.htmlacademy.ru/">
           <fieldset class="program-form__group">
+            <legend class="visually-hidden">Введите данные вашего кота</legend>
             <label class="program-form__label" for="name">Имя:*</label>
-            <input class="program-form__input input" type="text" name="name" id="name" placeholder="Имя" value="барсик"
-              required>
+            <input class="program-form__input input" type="text" name="name" id="name" value="барсик" required>
             <label class="program-form__label" for="weight">Вес (кг):*</label>
             <input class="program-form__input input" type="number" name="weight" id="weight" value="7" required>
             <label class="program-form__label" for="age">Возраст (лет):</label>
             <input class="program-form__input input" type="number" name="age" id="age" value="7">
           </fieldset>
           <fieldset class="program-form__group">
+            <legend class="visually-hidden">Какая программа вас интересует?</legend>
             <ul class="program-form__list">
               <li class="program-form__item">
                 <label class="control" for="diet">
@@ -83,8 +84,8 @@
             <legend class="program-form__title">Контактные данные
               (владельца кота)</legend>
             <label class="program-form__label" for="email">E-mail:*</label>
-            <input class="program-form__input input" type="email" name="email" id="email"
-              placeholder="Введите адрес электронной почты" value="kuklachev@gmail.com" required>
+            <input class="program-form__input input" type="email" name="email" id="email" value="kuklachev@gmail.com"
+              required>
             <label class="program-form__label" for="phone">Телефон:*</label>
             <input class="program-form__input input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90"
               required>
@@ -119,7 +120,7 @@
                 </label>
               </li>
               <li class="program-form__item">
-                <label class="control" for="">
+                <label class="control" for="vitamins">
                   <input class="visually-hidden control__input" type="checkbox" name="vitamins" id="vitamins">
                   <span class="control__mark"></span>
                   <span class="control__label">витамины</span>
