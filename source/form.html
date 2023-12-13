@@ -12,15 +12,20 @@
 <body class="page__body">
   <header class="main-header">
     <div class="container">
-      <a class="main-header__logo" href="#">
-        <img class="main-header__logo-img" src="#" alt="Логотип магазина Cat Energy" width="198" height="38">
+      <a class="main-header__logo" href="index.html">
+        <picture>
+          <source type="image/svg+xml" width="70" height="59" srcset="images/logo/logo-desctop.svg"
+            media="(min-width: 1440px)">
+          <source type="image/svg+xml" width="60" height="50" srcset="images/logo/logo-tablet.svg"
+            media="(min-width: 768px)">
+          <img class="main-header__logo-img" src="images/logo/logo-mobile.svg" alt="Логотип магазина Cat Energy"
+            width="38" height="38">
+        </picture>
+        <img class="main-header__logo-text" src="images/logo/logo-text.svg" alt="Cat Energy" width="101" height="18">
       </a>
       <nav class="main-nav">
         <button class="main-nav__button button burger burger--closed" type="button">
           <span class="visually-hidden">Открыть меню</span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
         </button>
         <ul class="main-nav__list site-list site-list--closed list-rest">
           <li class="site-list__item">
@@ -45,17 +50,27 @@
         <form class="program__form program-form" method="get" action="https://echo.htmlacademy.ru/">
           <fieldset class="program-form__group">
             <legend class="visually-hidden">Введите данные вашего кота</legend>
-            <label class="program-form__label" for="name">Имя:*</label>
-            <input class="program-form__input input" type="text" name="name" id="name" value="барсик" required>
-            <label class="program-form__label" for="weight">Вес (кг):*</label>
-            <input class="program-form__input input" type="number" name="weight" id="weight" value="7" required>
-            <label class="program-form__label" for="age">Возраст (лет):</label>
-            <input class="program-form__input input" type="number" name="age" id="age" value="7">
+            <ul class="program-form__list program-inputs">
+              <li class="program-form__item program-inputs__item">
+                <label class="program-form__label" for="name">Имя:*</label>
+                <input class="program-form__input input" type="text" name="name" id="name" placeholder="барсик"
+                  required>
+              </li>
+              <li class="program-form__item program-inputs__item">
+                <label class="program-form__label" for="weight">Вес (кг):*</label>
+                <input class="program-form__input input" type="number" name="weight" id="weight" placeholder="7"
+                  required>
+              </li>
+              <li class="program-form__item program-inputs__item">
+                <label class="program-form__label" for="age">Возраст (лет):</label>
+                <input class="program-form__input input" type="number" name="age" id="age" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="program-form__group">
             <legend class="visually-hidden">Какая программа вас интересует?</legend>
-            <ul class="program-form__list">
-              <li class="program-form__item">
+            <ul class="program-form__list program-radio">
+              <li class="program-form__item program-radio__item">
                 <label class="control" for="diet">
                   <input class="visually-hidden control__input" type="radio" name="program-group" value="diet" id="diet"
                     checked>
@@ -63,14 +78,14 @@
                   <span class="control__label">похудение</span>
                 </label>
               </li>
-              <li class="program-form__item">
+              <li class="program-form__item program-radio__item">
                 <label class="control" for="fat">
                   <input class="visually-hidden control__input" type="radio" name="program-group" value="fat" id="fat">
                   <span class="control__mark"></span>
                   <span class="control__label">Набор массы</span>
                 </label>
               </li>
-              <li class="program-form__item">
+              <li class="program-form__item program-radio__item">
                 <label class="control" for="advice">
                   <input class="visually-hidden control__input" type="radio" name="program-group" value="advice"
                     id="advice">
@@ -83,12 +98,18 @@
           <fieldset class="program-form__group">
             <legend class="program-form__title">Контактные данные
               (владельца кота)</legend>
-            <label class="program-form__label" for="email">E-mail:*</label>
-            <input class="program-form__input input" type="email" name="email" id="email" value="kuklachev@gmail.com"
-              required>
-            <label class="program-form__label" for="phone">Телефон:*</label>
-            <input class="program-form__input input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90"
-              required>
+            <ul class="program-form__list program-contact">
+              <li class="program-form__item program-contact__item"><label class="program-form__label"
+                  for="email">E-mail:*</label>
+                <input class="program-form__input input" type="email" name="email" id="email"
+                  placeholder="kuklachev@gmail.com" required>
+              </li>
+              <li class="program-form__item program-contact__item"><label class="program-form__label"
+                  for="phone">Телефон:*</label>
+                <input class="program-form__input input" type="tel" name="phone" id="phone"
+                  placeholder="8 (960) 900-60-90" required>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="program-form__group">
             <legend class="program-form__title">Комментарий</legend>
@@ -97,29 +118,29 @@
           </fieldset>
           <fieldset class="program-form__group">
             <legend class="program-form__title">Дополнительно</legend>
-            <ul class="program-form__list">
-              <li class="program-form__item">
+            <ul class="program-form__list program-checkbox">
+              <li class="program-form__item program-checkbox__item">
                 <label class="control" for="sweetener">
                   <input class="visually-hidden control__input" type="checkbox" name="sweetener" id="sweetener" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">сахарозаменитель</span>
                 </label>
               </li>
-              <li class="program-form__item">
+              <li class="program-form__item program-checkbox__item">
                 <label class="control" for="water">
                   <input class="visually-hidden control__input" type="checkbox" name="water" id="water">
                   <span class="control__mark"></span>
                   <span class="control__label">питьевая вода</span>
                 </label>
               </li>
-              <li class="program-form__item">
+              <li class="program-form__item program-checkbox__item">
                 <label class="control" for="milk">
                   <input class="visually-hidden control__input" type="checkbox" name="milk" id="milk">
                   <span class="control__mark"></span>
                   <span class="control__label">молоко</span>
                 </label>
               </li>
-              <li class="program-form__item">
+              <li class="program-form__item program-checkbox__item">
                 <label class="control" for="vitamins">
                   <input class="visually-hidden control__input" type="checkbox" name="vitamins" id="vitamins">
                   <span class="control__mark"></span>
@@ -133,21 +154,24 @@
         </form>
       </div>
     </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="container">
+        <div class="contacts__wrapper-address">
+          <p class="contacts__caption descr descr--caption">приглашаем к сотрудничеству дилеров!</p>
+          <address class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8
+            <br>
+            Санкт-Петербург
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <img class="contacts__map-img" src="#" alt="Карта с местонахождением магазина" width="320" height="362">
+      </div>
+    </section>
   </main>
   <footer class="main-footer">
-    <div class="container">
-      <div class="main-footer__wrapper-address">
-        <p class="main-footer__caption descr descr--caption">приглашаем к сотрудничеству дилеров!</p>
-        <address class="main-footer__address">
-          ул. Большая Конюшенная, д. 19/8
-          <br>
-          Санкт-Петербург
-        </address>
-      </div>
-    </div>
-    <div class="main-footer__map">
-      <img class="main-footer__map-img" src="#" alt="Карта с местонахождением магазина" width="320" height="362">
-    </div>
     <div class="container">
       <div class="main-footer__wpapper-logo">
         <a class="main-footer__logo" href="#">
@@ -170,7 +194,7 @@
             </a>
           </li>
         </ul>
-        <a class="main-footer__logo-academy  logo-academy link" href="https://htmlacademy.ru/">
+        <a class="main-footer__logo-academy  logo-academy link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="logo-academy__text">HTML Academy</span>
         </a>
       </div>
