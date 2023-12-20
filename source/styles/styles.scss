@@ -18,6 +18,7 @@
 @import "./blocks/descr.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
+@import "./blocks/site-list.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/purpose.scss";
 @import "./blocks/works.scss";
@@ -25,14 +26,14 @@
 @import "./blocks/contacts.scss";
 @import "./blocks/main-footer.scss";
 @import "./blocks/social.scss";
-@import "./blocks/inner-container.scss";
 @import "./blocks/catalog-product.scss";
 @import "./blocks/product-card.scss";
 @import "./blocks/additive.scss";
 @import "./blocks/promo.scss";
 @import "./blocks/program.scss";
 @import "./blocks/program-form.scss";
-@import "./blocks/program-inputs.scss";
-@import "./blocks/program-radio.scss";
+@import "./blocks/program-question";
+@import "./blocks/program-choose.scss";
+@import "./blocks/control.scss";
 @import "./blocks/program-contact.scss";
-@import "./blocks/program-checkbox";
+@import "./blocks/program-add.scss";

@@ -1,20 +1,20 @@
 .hero {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85) 60%,
       rgba(104, 183, 56, 0.85) 60%,
-      rgba(104, 183, 56, 0.85) 60%,
-      $basic-white 40%
-    ),
+      $basic-white 40%),
     url("../../images/background/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
 }
 
-@media (-webkit-max-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@media (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85) 60%,
         rgba(104, 183, 56, 0.85) 60%,
-        rgba(104, 183, 56, 0.85) 60%,
-        $basic-white 40%
-      ),
+        $basic-white 40%),
       url("../../images/background/index-background-mobile@2x.jpg");
   }
 }
@@ -30,5 +30,9 @@
 
 .hero__descr {
   line-height: 14px;
+  color: $basic-black;
+}
+
+.hero__descr--light {
   color: $basic-white;
 }

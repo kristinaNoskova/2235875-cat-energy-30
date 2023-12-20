@@ -1,4 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "prettier.printWidth": 99
+  "prettier.printWidth": 99,
+  "scssFormatter.printWidth": 50
 }

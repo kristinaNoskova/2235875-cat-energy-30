@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-.page {
+html {
   height: 100%;
 }
 
-.page__body {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100%;

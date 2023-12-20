@@ -1,9 +1,12 @@
 .descr {
   margin: 0;
   font-family: $secondary-font;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
   color: $dark-grey;
+}
+
+.descr--caption {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
