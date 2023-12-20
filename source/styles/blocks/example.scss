@@ -1,0 +1,20 @@
+.example {
+  background-color: $gray-bg;
+}
+
+.example__features-feature {
+  font-size: 24px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+.example__features-value {
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.example__caption {
+  font-size: 14px;
+  text-align: center;
+  color: $basic-black;
+}
