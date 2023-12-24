@@ -1,3 +1,71 @@
 .example-images {
+  position: relative;
   display: flex;
+  justify-content: center;
+  height: 256px;
+}
+
+.example-images__comp {
+  position: absolute;
+  width: 280px;
+  height: 256px;
+  overflow: hidden;
+}
+
+.example-images__before {
+  z-index: 10;
+}
+
+.example-images__after {
+  z-index: 20;
+  width: 140px;
+}
+
+.example-images__before-img {
+  display: inline-block;
+  width: 280px;
+}
+
+.example-images__button {
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ew-resize;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $basic-white;
+  border: 2px solid $special-grey;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: $basic-green;
+  }
+
+  &:active {
+    border-color: rgba(94, 170, 47, 0.6);
+  }
+
+  &::before {
+    content: '';
+    width: 24px;
+    height: 18px;
+    mask-image: url('../../images/icons/stack.svg#thumb');
+    mask-repeat: no-repeat;
+    background-color: $special-grey;
+  }
+
+  &:hover::before {
+    background-color: $basic-green;
+  }
+
+  &:active::before {
+    background-color: rgba(94, 170, 47, 0.6);
+  }
 }
