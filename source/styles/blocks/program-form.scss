@@ -5,8 +5,15 @@
 }
 
 .program-form__label {
+  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.program-form__input {
+  width: 100%;
 }
 
 .program-form__title {

@@ -14,16 +14,22 @@
 
 .example-images__before {
   z-index: 10;
+  right: 50%;
 }
 
 .example-images__after {
+  left: 50%;
   z-index: 20;
-  width: 140px;
 }
 
 .example-images__before-img {
-  display: inline-block;
-  width: 280px;
+  position: absolute;
+  left: 50%;
+}
+
+.example-images__after-img {
+  position: absolute;
+  right: 50%;
 }
 
 .example-images__button {
@@ -53,12 +59,23 @@
   }
 
   &::before {
+    @include icons-mask($special-grey, url('../../images/icons/stack.svg#thumb'));
     content: '';
     width: 24px;
     height: 18px;
-    mask-image: url('../../images/icons/stack.svg#thumb');
-    mask-repeat: no-repeat;
-    background-color: $special-grey;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: flex;
+    z-index: -1;
+    width: 4px;
+    height: 256px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background: linear-gradient($special-grey 43%, transparent 43%, transparent 57%, $special-grey 57%, $special-grey 100%);
   }
 
   &:hover::before {
