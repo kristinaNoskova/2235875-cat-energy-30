@@ -5,24 +5,32 @@
 }
 
 .social__link::before {
-  content: '';
+  content: "";
   display: block;
   width: 28px;
   height: 22px;
 }
 
 .social__link--vkontakte::before {
-  @include icons-mask($special-grey, url('../../images/icons/stack.svg#vkontakte'))
+  @include icons-mask(
+    $special-grey,
+    url("../../images/icons/stack.svg#vkontakte")
+  );
 }
 
 .social__link--youtube::before {
-  @include icons-mask($special-grey, url('../../images/icons/stack.svg#youtube'))
+  @include icons-mask(
+    $special-grey,
+    url("../../images/icons/stack.svg#youtube")
+  );
 }
 
 .social__link--telegram::before {
-  @include icons-mask($special-grey, url('../../images/icons/stack.svg#telegram'))
+  @include icons-mask(
+    $special-grey,
+    url("../../images/icons/stack.svg#telegram")
+  );
 }
-
 
 .social__link:hover::before {
   background-color: $basic-green;

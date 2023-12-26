@@ -59,14 +59,17 @@
   }
 
   &::before {
-    @include icons-mask($special-grey, url('../../images/icons/stack.svg#thumb'));
-    content: '';
+    @include icons-mask(
+      $special-grey,
+      url("../../images/icons/stack.svg#thumb")
+    );
+    content: "";
     width: 24px;
     height: 18px;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     display: flex;
     z-index: -1;
@@ -75,7 +78,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 2px;
-    background: linear-gradient($special-grey 43%, transparent 43%, transparent 57%, $special-grey 57%, $special-grey 100%);
+    background: linear-gradient(
+      $special-grey 43%,
+      transparent 43%,
+      transparent 57%,
+      $special-grey 57%,
+      $special-grey 100%
+    );
   }
 
   &:hover::before {

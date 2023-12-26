@@ -13,17 +13,19 @@
 }
 
 .purpose__item::before {
-  content: '';
+  content: "";
   width: 134px;
   height: 100px;
 }
 
 .purpose__item--slim::before {
-  background: url('../../images/icons/stack.svg#cat-slim') no-repeat center center;
+  background: url("../../images/icons/stack.svg#cat-slim") no-repeat center
+    center;
 }
 
 .purpose__item--mass::before {
-  background: url('../../images/icons/stack.svg#cat-puma') no-repeat center center;
+  background: url("../../images/icons/stack.svg#cat-puma") no-repeat center
+    center;
 }
 
 .purpose__title {
@@ -47,9 +49,10 @@
 }
 
 .purpose__link::after {
-  content: '';
+  content: "";
   display: block;
   width: 32px;
   height: 10px;
-  background: url('../../images/icons/stack.svg#icon_arrow') no-repeat center center;
+  background: url("../../images/icons/stack.svg#icon_arrow") no-repeat center
+    center;
 }
