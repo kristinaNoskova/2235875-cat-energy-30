@@ -62,3 +62,7 @@
   background: url("../../images/icons/stack.svg#icon_arrow") no-repeat center
     center;
 }
+
+.purpose__link:hover::after {
+  // transform: scaleX(1.5);
+}
