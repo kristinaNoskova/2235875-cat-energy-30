@@ -1,3 +1,24 @@
-.works {
-  background-color: transparent;
+.works__item::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.works__item--sheet::before {
+  @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-sheet"));
+}
+
+.works__item--powder::before {
+  @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-powder"));
+}
+
+.works__item--food::before {
+  @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-eat"));
+}
+
+.works__item--watch::before {
+  @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-watch"));
 }

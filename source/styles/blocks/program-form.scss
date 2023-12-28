@@ -5,8 +5,46 @@
 }
 
 .program-form__label {
+  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.program-form__label--email::after {
+  @include icons-mask(
+    $basic-black,
+    url("../../images/icons/stack.svg#email-stroke")
+  );
+  content: "";
+  position: absolute;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.program-form__label--phone::after {
+  @include icons-mask(
+    $basic-black,
+    url("../../images/icons/stack.svg#phone-stroke")
+  );
+  content: "";
+  position: absolute;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.program-form__input--email,
+.program-form__input--phone {
+  padding-right: 30px;
+}
+
+.program-form__input {
+  width: 100%;
 }
 
 .program-form__title {

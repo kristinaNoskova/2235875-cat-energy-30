@@ -1,12 +1,15 @@
 .control {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .control__input {
   position: relative;
   appearance: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   width: 30px;
@@ -22,10 +25,25 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background-color: $basic-green;
+}
+
+.control__input[type="checkbox"] {
+  border-radius: 0;
+}
+
+.control__input[type="checkbox"]:checked::before {
+  @include bg-icon(
+    transparent,
+    url("../../images/icons/stack.svg#tick"),
+    26px 26px
+  );
+  content: "";
+  width: 26px;
+  height: 26px;
 }
 
 .control__label {

@@ -72,7 +72,7 @@
       <div class="container">
         <h2 class="visually-hidden">Для каких целей наш корм?</h2>
         <ul class="purpose__list list-reset">
-          <li class="purpose__item">
+          <li class="purpose__item purpose__item--slim">
             <h3 class="purpose__title subtitle">похудение</h3>
             <p class="purpose__descr descr">
               Ваш кот весит больше собаки и почти утратил способность лазить
@@ -81,7 +81,7 @@
             </p>
             <a class="purpose__link link" href="#">каталог slim</a>
           </li>
-          <li class="purpose__item">
+          <li class="purpose__item purpose__item--mass">
             <h3 class="purpose__title subtitle">Набор массы</h3>
             <p class="purpose__descr descr">
               Заработать авторитет среди дворовых котов и даже собак? Серия
@@ -97,25 +97,25 @@
       <div class="container">
         <h2 class="works__title title">Как это работает</h2>
         <ul class="works__list list-reset">
-          <li class="works__item">
+          <li class="works__item works__item--sheet">
             <p class="works__descr descr">
               Функциональное питание содержит только полезные питательные
               вещества.
             </p>
           </li>
-          <li class="works__item">
+          <li class="works__item works__item--powder">
             <p class="works__descr descr">
               Выпускается в виде порошка, который нужно лишь залить кипятком и
               готово.
             </p>
           </li>
-          <li class="works__item">
+          <li class="works__item works__item--food">
             <p class="works__descr descr">
               Замените один-два приема обычной еды на наше функциональное
               питание.
             </p>
           </li>
-          <li class="works__item">
+          <li class="works__item works__item--watch">
             <p class="works__descr descr">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего
               питомца!
@@ -148,21 +148,26 @@
           </p>
         </div>
         <div class="example__images example-images">
-          <picture>
-            <source type="image/png" width="560" height="512" media="(min-width: 768px)"
-              srcset="images/slider/slider-cat-tablet-before@1x.png 1x,images/slider/slider-cat-tablet-before@2x.png 2x" />
-            <img class="example-images__before" src="images/slider/slider-cat-mobile-before@1x.png"
-              srcset="images/slider/slider-cat-mobile-before@2x.png 2x" alt="Фото кота до" width="280" height="256" />
-          </picture>
-          <picture>
-            <source type="image/png" width="560" height="512" media="(min-width: 768px)"
-              srcset="images/slider/slider-cat-tablet-after@1x.png@1x.png 1x,images/slider/slider-cat-tablet-after@2x.png 2x" />
-            <img class="example-images__after" src="images/slider/slider-cat-mobile-after@1x.png"
-              srcset="images/slider/slider-cat-mobile-after@2x.png 2x" alt="Фото кота после" width="280" height="256" />
-          </picture>
+          <div class="example-images__comp example-images__before">
+            <picture>
+              <source type="image/png" width="560" height="512" media="(min-width: 768px)"
+                srcset="images/slider/slider-cat-tablet-before@1x.png 1x,images/slider/slider-cat-tablet-before@2x.png 2x" />
+              <img class="example-images__before-img" src="images/slider/slider-cat-mobile-before@1x.png"
+                srcset="images/slider/slider-cat-mobile-before@2x.png 2x" alt="Фото кота до" width="280" height="256" />
+            </picture>
+          </div>
           <button class="example-images__button button" type="button">
             <span class="visually-hidden">Передвинуть ползунок вправо и влево</span>
           </button>
+          <div class="example-images__comp example-images__after">
+            <picture>
+              <source type="image/png" width="560" height="512" media="(min-width: 768px)"
+                srcset="images/slider/slider-cat-tablet-after@1x.png 1x, images/slider/slider-cat-tablet-after@2x.png 2x" />
+              <img class="example-images__after-img" src="images/slider/slider-cat-mobile-after@1x.png"
+                srcset="images/slider/slider-cat-mobile-after@2x.png 2x" alt="Фото кота после" width="280"
+                height="256" />
+            </picture>
+          </div>
         </div>
       </div>
     </section>

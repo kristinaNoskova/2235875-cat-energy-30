@@ -1,3 +1,32 @@
 .logo-academy {
   display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-academy::before {
+  content: "HTML Academy";
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark-grey;
+}
+
+.logo-academy::after {
+  @include icons-mask(
+    $special-grey,
+    url("../../images/icons/stack.svg#logo-html-icon")
+  );
+  content: "";
+  width: 27px;
+  height: 34px;
+}
+
+.logo-academy:hover::after {
+  background-color: $basic-green;
+}
+
+.logo-academy:active::before {
+  background-color: $basic-green;
+  opacity: 0.3;
 }

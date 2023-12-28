@@ -7,3 +7,18 @@
     src: $font-src;
   }
 }
+
+@mixin bg-icon($bg-color: #68b738, $bg-image, $bg-size: 30px 32px) {
+  background-color: $bg-color;
+  background-image: $bg-image;
+  background-repeat: no-repeat;
+  background-size: $bg-size;
+  background-position: center;
+}
+
+@mixin icons-mask($bg-color, $mask-image) {
+  mask-image: $mask-image;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $bg-color;
+}
