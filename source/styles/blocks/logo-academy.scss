@@ -23,10 +23,10 @@
 }
 
 .logo-academy:hover::after {
-  background-color: $basic-green;
+  background-color: $primary-color;
 }
 
 .logo-academy:active::before {
-  background-color: $basic-green;
+  background-color: $primary-color;
   opacity: 0.3;
 }

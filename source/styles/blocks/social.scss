@@ -33,10 +33,10 @@
 }
 
 .social__link:hover::before {
-  background-color: $basic-green;
+  background-color: $primary-color;
 }
 
 .social__link:active::before {
-  background-color: $basic-green;
+  background-color: $primary-color;
   opacity: 0.3;
 }
