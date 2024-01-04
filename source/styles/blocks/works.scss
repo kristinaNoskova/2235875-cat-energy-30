@@ -1,5 +1,6 @@
 .works {
-  padding-top: 20px;
+  padding-top: 23px;
+  padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
@@ -7,6 +8,14 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 71px;
+  }
+}
+
+.works__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
   }
 }
 
@@ -18,14 +27,28 @@
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
+    row-gap: 37px;
   }
 }
 
 .works__item {
   display: grid;
   grid-template-columns: 60px 1fr;
-  align-items: start;
+  align-items: center;
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 80px 1fr;
+    width: calc((100% - 60px) / 2);
+    max-width: 325px;
+    column-gap: 37px;
+    row-gap: 31px;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 245px;
+  }
 
   &::after {
     content: "";
@@ -60,12 +83,6 @@
       grid-row: 1/3;
     }
   }
-
-  @media (min-width: $tablet-width) {
-    grid-template-columns: 80px 1fr;
-    max-width: 250px;
-    gap: 37px;
-  }
 }
 
 .works__item--sheet::after {
@@ -90,6 +107,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2;
+    max-width: 224px;
     font-size: 16px;
     line-height: 24px;
   }

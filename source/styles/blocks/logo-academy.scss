@@ -1,32 +1,40 @@
 .logo-academy {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-}
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-.logo-academy::before {
-  content: "HTML Academy";
-  font-family: $secondary-font;
-  font-size: 16px;
-  line-height: 20px;
-  color: $dark-grey;
-}
+  &::before {
+    content: "HTML Academy";
+    font-family: $secondary-font;
+    font-size: 16px;
+    line-height: 20px;
+    color: $dark-grey;
+  }
 
-.logo-academy::after {
-  @include icons-mask(
-    $special-grey,
-    url("../../images/icons/stack.svg#logo-html-icon")
-  );
-  content: "";
-  width: 27px;
-  height: 34px;
-}
+  &::after {
+    @include icons-mask(
+      $special-grey,
+      url("../../images/icons/stack.svg#logo-html-icon")
+    );
+    content: "";
+    width: 27px;
+    height: 34px;
+  }
 
-.logo-academy:hover::after {
-  background-color: $primary-color;
-}
+  &:hover::after {
+    background-color: $primary-color;
+  }
 
-.logo-academy:active::before {
-  background-color: $primary-color;
-  opacity: 0.3;
+  &:active::before {
+    background-color: $primary-color;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 23px;
+  }
 }

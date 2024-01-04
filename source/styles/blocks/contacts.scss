@@ -1,9 +1,42 @@
+.contacts__wrapper-address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
 .contacts__caption {
+  width: 50%;
   color: #111111;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
+  width: 50%;
   font-family: $secondary-font;
   font-style: normal;
+  font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 160px;
+    font-size: 16px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+
+.contacts__address-sity {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 15px;
+  }
 }

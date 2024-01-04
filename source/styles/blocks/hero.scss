@@ -3,6 +3,7 @@
 
   @media (min-width: $tablet-width) {
     position: static;
+    padding-top: 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,7 +30,7 @@
       url("../../images/background/index-background-mobile@2x.jpg") 2x
     );
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 
   @media (min-width: $tablet-width) {
@@ -57,11 +58,9 @@
 .hero .container {
   display: grid;
   grid-template-columns: 100%;
-  padding-top: 27px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 32px;
     align-items: flex-start;
   }
 

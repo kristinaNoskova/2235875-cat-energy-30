@@ -2,7 +2,7 @@
   padding-top: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 82px;
+    padding-top: 0;
   }
 }
 
@@ -18,10 +18,11 @@
 
 .purpose__item {
   display: grid;
-  grid-template-columns: 67px 1fr;
+  grid-template-columns: 60px 1fr;
   column-gap: 11px;
+  row-gap: 23px;
   align-items: center;
-  padding: 20px 20px 20px 13px;
+  padding: 23px 20px 20px 20px;
   width: 100%;
   background-color: $basic-grey;
 
@@ -30,6 +31,7 @@
     width: 80px;
     height: 50px;
     justify-self: center;
+    transform: translateX(-5px);
 
     @media (min-width: $tablet-width) {
       grid-column: 2;
@@ -47,6 +49,8 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 60% 40%;
+    row-gap: 24px;
+    padding: 67px 29px 57px 52px;
   }
 
   @media (min-width: $desktop-width) {
@@ -90,6 +94,22 @@
 
 .purpose__descr {
   grid-column: 1/-1;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -22px;
+    background-color: $border-hover-color;
+    height: 1px;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 1;
@@ -97,6 +117,7 @@
     font-size: 16px;
     line-height: 150%;
   }
+
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
   }
@@ -106,6 +127,8 @@
   grid-column: 1/-1;
   display: flex;
   align-items: center;
+  width: 100%;
+  margin-top: 20px;
   gap: 15px;
   font-size: 16px;
   line-height: 16px;
@@ -115,6 +138,12 @@
   @media (min-width: $tablet-width) {
     grid-column: 1;
     grid-row: 3;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
   }
 }
 

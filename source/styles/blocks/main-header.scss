@@ -1,6 +1,10 @@
 .main-header {
   position: relative;
-  padding: 13px 0 14px 0;
+  padding: 12px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 0;
+  }
 }
 
 .main-header .container {
@@ -33,6 +37,12 @@
 
   @media (min-width: $desktop-width) {
     height: 59px;
+  }
+}
+
+.main-header__logo-img {
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
   }
 }
 
