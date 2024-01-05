@@ -1,8 +1,11 @@
 /* в этот файл добавляет скрипты*/
-const burgerButton = document.querySelector('.burger');
-const siteList = document.querySelector('.site-list');
+const mainNav = document.querySelector('.main-nav');
+const burgerButton = document.querySelector('.main-nav__toggle');
+
+mainNav.classList.remove('main-nav--nojs');
+
 
 burgerButton.addEventListener('click', () => {
-  siteList.classList.toggle('site-list--open');
-  burgerButton.classList.toggle('burger--closed');
+  mainNav.classList.toggle('main-nav--opened');
+  mainNav.classList.toggle('main-nav--closed');
 });

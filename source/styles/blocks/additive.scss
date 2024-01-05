@@ -1,10 +1,24 @@
 .additive__title {
+  margin-bottom: 36px;
   font-size: 24px;
   line-height: 24px;
   color: $basic-black;
 }
 
+.additive__item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 13px 0 19px;
+  border-top: 1px solid $border-hover-color;
+
+  &:last-child {
+    border-bottom: 1px solid $border-hover-color;
+  }
+}
+
 .additive__name {
+  width: 100%;
+  margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
   color: $dark-grey-tile;
@@ -12,11 +26,68 @@
 
 .additive__features {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 14px;
 }
 
+.additive__button {
+  width: 100%;
+}
+
 .additive__promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 45px 60px;
   height: 290px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    min-height: 100%;
+    background-color: #414046;
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85) 100%,
+        rgba(104, 183, 56, 0.85) 100%
+      ),
+      image-set(
+        url("../../images/background/catalog-bg-mobile@1x.jpg") 1x,
+        url("../../images/background/catalog-bg-mobile@2x.jpg") 2x
+      );
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &::before {
+    content: "";
+    @include bg-icon(
+      transparent,
+      url("../../images/icons/stack.svg#icon-gift"),
+      100%
+    );
+    content: "";
+    width: 78px;
+    height: 80px;
+    margin-bottom: 48px;
+  }
+}
+
+.additive__promo-descr {
+  max-width: 160px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $basic-white;
 }
