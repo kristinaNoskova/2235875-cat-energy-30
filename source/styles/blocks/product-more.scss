@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 25px 0 20px;
 
   &::before {
     @include bg-icon(
@@ -12,14 +13,63 @@
     content: "";
     width: 30px;
     height: 30px;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 37px 40px;
+    justify-content: center;
+    min-height: 432px;
+    align-self: end;
+    border: 2px solid $basic-grey;
   }
 }
 
 .product-more__name {
-  max-width: 90%;
-  margin-bottom: 8px;
+  max-width: 100%;
+  margin-bottom: 6px;
+  font-size: 16px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.product-more__name br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.product-more__descr {
+  margin-bottom: 21px;
+  font-size: 12px;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
+
+.product-more__descr br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .product-more__button {

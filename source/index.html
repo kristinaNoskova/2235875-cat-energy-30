@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="favicons/favicon180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <script src="scripts/index.js" defer></script>
+  <script src="https://api-maps.yandex.ru/v3/?apikey=d21ba5c7-4963-491b-bffc-e02dccce5e1c&lang=ru_RU"></script>
+  <script src="scripts/maps.js" defer></script>
 </head>
 
 <body>
@@ -27,19 +29,19 @@
         </picture>
         <img class="main-header__logo-text" src="images/logo/logo-text.svg" alt="Cat Energy" width="101" height="18" />
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list site-list list-reset">
           <li class="site-list__item">
-            <a class="site-list__link link site-list__link--current" href="#">главная</a>
+            <a class="site-list__link link site-list__link--light site-list__link--current" href="#">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link link" href="catalog.html">каталог продукции</a>
+            <a class="site-list__link site-list__link--light link" href="catalog.html">каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link link" href="form.html">подбор программы</a>
+            <a class="site-list__link site-list__link--light link" href="form.html">подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -191,10 +193,8 @@
           </address>
         </div>
       </div>
-      <iframe class="contacts__map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1704461817534!5m2!1sru!2sru"
-        width="320" height="362" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map">
+      </div>
     </section>
   </main>
   <footer class="main-footer">

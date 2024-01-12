@@ -13,6 +13,8 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 59px;
+    padding-bottom: 55px;
   }
 }
 
@@ -22,7 +24,13 @@
   text-align: center;
   border-bottom: 1px solid $border-hover-color;
 
+  &:focus {
+    outline: 2px solid $primary-color;
+  }
+
   @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 128px;
     border: none;
     text-align: start;
   }

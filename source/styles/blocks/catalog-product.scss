@@ -2,8 +2,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
+    justify-content: center;
     gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    row-gap: 63px;
   }
 }
 
@@ -12,5 +17,9 @@
 
   @media (min-width: $tablet-width) {
     width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
   }
 }

@@ -26,8 +26,12 @@
   counter-reset: works-item 0;
 
   @media (min-width: $tablet-width) {
-    justify-content: space-between;
     row-gap: 37px;
+    column-gap: 97px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
   }
 }
 
@@ -39,8 +43,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 80px 1fr;
-    width: calc((100% - 60px) / 2);
-    max-width: 325px;
+    width: calc((100% - 134px) / 2);
     column-gap: 37px;
     row-gap: 31px;
     align-items: start;
@@ -107,7 +110,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 2;
-    max-width: 224px;
+    width: 90%;
     font-size: 16px;
     line-height: 24px;
   }

@@ -1,15 +1,26 @@
+.contacts .container {
+  position: relative;
+}
+
 .contacts__wrapper-address {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 26px;
   padding-bottom: 26px;
-}
 
-.contacts__map {
-  display: block;
-  width: 100%;
-  border: none;
+  @media (min-width: $tablet-width) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 20;
+    top: 95px;
+    padding: 60px 74px 60px 80px;
+    min-width: 565px;
+    background-color: $basic-white;
+  }
 }
 
 .contacts__caption {
@@ -36,6 +47,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    text-align: start;
   }
 }
 
