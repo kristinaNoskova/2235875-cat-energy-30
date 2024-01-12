@@ -1,22 +1,210 @@
+.additive {
+  padding-top: 26px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 86px;
+  }
+}
+
+.additive__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .additive__title {
+  margin-bottom: 36px;
   font-size: 24px;
   line-height: 24px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 78px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
+.additive__list {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    min-width: 895px;
+  }
+}
+
+.additive__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 14px 0 17px;
+  border-top: 1px solid $border-hover-color;
+
+  &:last-child {
+    border-bottom: 1px solid $border-hover-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 18px;
+    padding: 28px 37px;
+    border-left: 1px solid $border-hover-color;
+    border-right: 1px solid $border-hover-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 285px 244px;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 0;
+    padding: 15px 0;
+    border-left: none;
+    border-right: none;
+  }
+}
 .additive__name {
+  margin-bottom: 13px;
   font-size: 16px;
   line-height: 16px;
   color: $dark-grey-tile;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additive__features {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    column-gap: 49px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    column-gap: 0;
+  }
 }
 
+.additive__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3;
+  }
+}
 .additive__promo {
-  height: 290px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 56px 45px 47px;
+  min-height: 290px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    min-height: 100%;
+    background-color: #414046;
+    background-image: linear-gradient(
+        rgba(104, 183, 56, 0.85) 100%,
+        rgba(104, 183, 56, 0.85) 100%
+      ),
+      image-set(
+        url("../../images/background/catalog-bg-mobile@1x.jpg") 1x,
+        url("../../images/background/catalog-bg-mobile@2x.jpg") 2x
+      );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media (min-width: $tablet-width) {
+      background-size: cover;
+      background-position: top 60% center;
+    }
+  }
+
+  &::before {
+    content: "";
+    @include bg-icon(
+      transparent,
+      url("../../images/icons/stack.svg#icon-gift"),
+      78px 80px
+    );
+    width: 78px;
+    height: 80px;
+    margin-bottom: 47px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 46px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 77px;
+    padding-right: 125px;
+    padding: 42px 125px 45px 77px;
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 245px;
+    padding: 56px 45px 47px;
+  }
+}
+
+.additive__promo-descr {
+  max-width: 160px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }

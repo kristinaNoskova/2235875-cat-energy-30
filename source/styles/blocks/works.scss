@@ -1,24 +1,117 @@
-.works__item::before {
-  content: "";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
+.works {
+  padding-top: 23px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+  }
 }
 
-.works__item--sheet::before {
+.works__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.works__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  counter-reset: works-item 0;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 37px;
+    column-gap: 97px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+  }
+}
+
+.works__item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 80px 1fr;
+    width: calc((100% - 134px) / 2);
+    column-gap: 37px;
+    row-gap: 31px;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 245px;
+  }
+
+  &::after {
+    content: "";
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+
+    @media (min-width: $tablet-width) {
+      align-self: end;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::before {
+    counter-increment: works-item;
+    content: counter(works-item);
+    font-size: 280px;
+    line-height: 100%;
+    color: $basic-grey;
+
+    @media (max-width: $mobile-width-only) {
+      content: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2;
+      grid-row: 1/3;
+    }
+  }
+}
+
+.works__item--sheet::after {
   @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-sheet"));
 }
 
-.works__item--powder::before {
+.works__item--powder::after {
   @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-powder"));
 }
 
-.works__item--food::before {
+.works__item--food::after {
   @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-eat"));
 }
 
-.works__item--watch::before {
+.works__item--watch::after {
   @include bg-icon($bg-image: url("../../images/icons/stack.svg#icon-watch"));
+}
+
+.works__descr {
+  grid-column: 2;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 90%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

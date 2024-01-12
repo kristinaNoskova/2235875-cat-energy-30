@@ -1,6 +1,7 @@
 .control {
   display: flex;
   align-items: center;
+  column-gap: 15px;
   cursor: pointer;
 }
 
@@ -28,7 +29,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background-color: $basic-green;
+  background-color: $primary-color;
 }
 
 .control__input[type="checkbox"] {
@@ -36,12 +37,12 @@
 }
 
 .control__input[type="checkbox"]:checked::before {
+  content: "";
   @include bg-icon(
     transparent,
     url("../../images/icons/stack.svg#tick"),
     26px 26px
   );
-  content: "";
   width: 26px;
   height: 26px;
 }
