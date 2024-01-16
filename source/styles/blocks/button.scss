@@ -14,9 +14,49 @@
 .button--primary {
   background-color: $primary-color;
   color: $basic-white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:focus {
+    outline: 2px solid $basic-black;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $basic-black;
+  }
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-hover;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--secondary {
   background-color: $basic-grey;
   color: $dark-grey;
+
+  transition: background-color 0.3s ease-in-out;
+
+  &:focus {
+    outline: 2px solid $basic-black;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $basic-black;
+  }
+
+  &:hover {
+    background-color: $button-hover-secondary;
+  }
+
+  &:active {
+    background-color: $button-hover-secondary;
+  }
 }

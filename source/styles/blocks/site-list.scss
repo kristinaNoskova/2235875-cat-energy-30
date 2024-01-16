@@ -1,21 +1,24 @@
 .site-list {
   position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   z-index: 20;
   display: none;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  border-bottom: 1px solid $gray-bg;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     position: static;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 37px;
+    border: none;
     background-color: transparent;
   }
 
@@ -26,15 +29,47 @@
 
 .site-list__link {
   display: inline-block;
+  width: 100%;
+  padding: 22px 15px 24px 15px;
   font-family: $primary-font;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 22px 15px 24px 15px;
+  text-align: center;
+  border-top: 1px solid $gray-bg;
   color: $basic-black;
 
   &:focus {
     outline: 2px solid $primary-color;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--current {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 2px;
+      background-color: $primary-color;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -56,5 +91,25 @@
     &:focus {
       outline: 2px solid $basic-white;
     }
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: 2px solid $basic-white;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-list__link--light.site-list__link--current::before {
+  @media (min-width: $desktop-width) {
+    background-color: $basic-white;
   }
 }

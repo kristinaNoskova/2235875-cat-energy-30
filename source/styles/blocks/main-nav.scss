@@ -14,6 +14,24 @@
   height: 24px;
   cursor: pointer;
 
+  &:focus {
+    outline: 2px solid $primary-color;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -29,7 +47,7 @@
   height: 2px;
   background-color: $basic-black;
   box-shadow: 0 8px 0 0 $basic-black, 0 16px 0 0 $basic-black;
-  transition: box-shadow 0.1s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -43,7 +61,7 @@
     width: 24px;
     height: 2px;
     background-color: $basic-black;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease-in-out;
   }
 
   &::before {

@@ -9,6 +9,10 @@
   &::placeholder {
     color: $dark-grey;
   }
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet-form;
+  }
 }
 
 /* stylelint-disable */

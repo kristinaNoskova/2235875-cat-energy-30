@@ -16,6 +16,10 @@
     padding-top: 59px;
     padding-bottom: 55px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 68px;
+  }
 }
 
 .main-footer__logo {

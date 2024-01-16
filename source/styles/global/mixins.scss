@@ -29,3 +29,28 @@
   column-gap: 13px;
   align-items: center;
 }
+
+@mixin fonts-tablet-form {
+  font-size: 20px;
+  line-height: normal;
+}
+
+@mixin link-state {
+  &:focus {
+    outline: 2px solid $primary-color;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

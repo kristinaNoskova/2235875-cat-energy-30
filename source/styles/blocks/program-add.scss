@@ -1,0 +1,7 @@
+.program-add__item {
+  &:not(:last-child) {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+}

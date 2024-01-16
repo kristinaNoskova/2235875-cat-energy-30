@@ -37,6 +37,14 @@
 
 .product-card__img {
   display: block;
+
+  @media (min-width: 500px) {
+    max-width: 150px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+  }
 }
 
 .product-card__link-name {
