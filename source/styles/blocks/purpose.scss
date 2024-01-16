@@ -154,9 +154,11 @@
   &:focus {
     outline: 2px solid $basic-black;
   }
+
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
   &:focus-visible {
     outline: 2px solid $basic-black;
   }
@@ -168,7 +170,8 @@
     display: block;
     width: 32px;
     height: 10px;
-    background: url("../../images/icons/stack.svg#icon_arrow") no-repeat center
+    background:
+      url("../../images/icons/stack.svg#icon_arrow") no-repeat center
       center;
     transition: transform 0.3s ease-in-out;
   }

@@ -84,6 +84,7 @@
     border-right: none;
   }
 }
+
 .additive__name {
   margin-bottom: 13px;
   font-size: 16px;
@@ -130,6 +131,7 @@
     grid-column: 3;
   }
 }
+
 .additive__promo {
   position: relative;
   display: flex;
@@ -149,7 +151,8 @@
     z-index: -1;
     min-height: 100%;
     background-color: #414046;
-    background-image: linear-gradient(
+    background-image:
+ linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
       ),
@@ -169,6 +172,7 @@
 
   &::before {
     content: "";
+
     @include bg-icon(
       transparent,
       url("../../images/icons/stack.svg#icon-gift"),
@@ -190,8 +194,6 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 77px;
-    padding-right: 125px;
     padding: 42px 125px 45px 77px;
     min-height: 200px;
   }

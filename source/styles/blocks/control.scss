@@ -53,6 +53,7 @@
 
 .control__input[type="checkbox"]:checked::before {
   content: "";
+
   @include bg-icon(
     transparent,
     url("../../images/icons/stack.svg#tick"),

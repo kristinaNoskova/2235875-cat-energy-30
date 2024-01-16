@@ -71,6 +71,7 @@
 
   &::before {
     content: "";
+
     @include icons-mask(
       $special-grey,
       url("../../images/icons/stack.svg#thumb")

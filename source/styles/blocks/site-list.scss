@@ -42,9 +42,11 @@
   &:focus {
     outline: 2px solid $primary-color;
   }
+
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
   &:focus-visible {
     outline: 2px solid $primary-color;
   }
@@ -91,9 +93,11 @@
     &:focus {
       outline: 2px solid $basic-white;
     }
+
     &:focus:not(:focus-visible) {
       outline: none;
     }
+
     &:focus-visible {
       outline: 2px solid $basic-white;
     }

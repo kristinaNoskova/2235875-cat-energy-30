@@ -4,7 +4,8 @@
   background-color: $gray-bg;
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
       $basic-white 50%,
       $basic-white 50%,
       $gray-bg 50%,
@@ -14,7 +15,8 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 75px;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
       $basic-white 28%,
       $basic-white 38%,
       $gray-bg 28%,

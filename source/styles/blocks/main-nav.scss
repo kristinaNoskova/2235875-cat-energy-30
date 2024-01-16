@@ -17,9 +17,11 @@
   &:focus {
     outline: 2px solid $primary-color;
   }
+
   &:focus:not(:focus-visible) {
     outline: none;
   }
+
   &:focus-visible {
     outline: 2px solid $primary-color;
   }
@@ -92,6 +94,7 @@
   grid-column: 1 / -1;
   grid-row: 2;
 }
+
 .main-nav--nojs .main-nav__list {
   position: static;
   display: flex;

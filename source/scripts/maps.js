@@ -1,8 +1,9 @@
 initMap();
 
 async function initMap() {
-  // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+  // eslint-disable-next-line
   await ymaps3.ready;
+  // eslint-disable-next-line
   const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
   const map = new YMap(
     document.querySelector('.map'),
