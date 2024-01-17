@@ -41,10 +41,11 @@
   border-radius: 2px;
   background-color: $special-grey;
   cursor: ew-resize;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.2s ease-in-out;
 
   &:hover {
     background-color: $primary-color;
+    transition: background-color 0 ease-in-out;
   }
 
   &:active {
@@ -67,11 +68,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: background-color 0.3s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 
   &::before {
     content: "";
-
     @include icons-mask(
       $special-grey,
       url("../../images/icons/stack.svg#thumb")
@@ -83,10 +83,10 @@
 
 .example-images__button:hover .example-images__button-icon {
   border-color: $primary-color;
-  transition: border-color 0.3s ease;
+  transition: background-color 0 ease-in-out;
 }
 
 .example-images__button:hover .example-images__button-icon::before {
   background-color: $primary-color;
-  transition: background-color 0.1s ease;
+  transition: background-color 0 ease-in-out;
 }

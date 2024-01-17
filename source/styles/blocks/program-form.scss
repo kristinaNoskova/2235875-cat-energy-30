@@ -19,10 +19,27 @@
 }
 
 .program-form__group-question {
+  position: relative;
   margin-bottom: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,7 +49,23 @@
 }
 
 .program-form__group-choose {
+  position: relative;
   margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: $border-color;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
@@ -93,9 +126,11 @@
   margin-bottom: 34px;
 
   .program-form__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 62px;
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 62px;
+    }
 
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(4, 1fr);
@@ -170,8 +205,17 @@
   }
 }
 
-.program-form__label-icons:has(.program-form__input:focus-visible)::after {
+.program-form__label-icons:has(.program-form__input:focus)::after {
   background-color: $primary-color;
+}
+
+.program-form__label-icons:has(.program-form__input-invalid)::after {
+  background-color: $status-error;
+}
+
+.program-form__input-invalid {
+  outline: 2px solid $status-error;
+  outline-offset: -1px;
 }
 
 .program-form__input {

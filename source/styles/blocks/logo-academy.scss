@@ -6,14 +6,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  &::before {
-    content: "HTML Academy";
-    font-family: $secondary-font;
-    font-size: 16px;
-    line-height: 20px;
-    color: $dark-grey;
-  }
-
   &::after {
     @include icons-mask(
       $special-grey,
@@ -24,7 +16,7 @@
     height: 34px;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid $primary-color;
   }
 
@@ -43,4 +35,12 @@
     padding: 0;
     width: 168px;
   }
+}
+
+.logo-academy__text {
+  content: "";
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $dark-grey;
 }

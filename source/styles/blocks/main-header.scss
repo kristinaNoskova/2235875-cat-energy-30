@@ -1,9 +1,11 @@
 .main-header {
   position: relative;
   padding: 12px 0;
+  border-bottom: 1px solid $border-color;
 
   @media (min-width: $tablet-width) {
     padding: 26px 0;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -34,14 +36,7 @@
   margin-right: auto;
   grid-template-columns: 33px 1fr;
   width: 100%;
-
-  &:focus {
-    outline: 2px solid $primary-color;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
+  transition: opacity 0.2s ease-in-out;
 
   &:focus-visible {
     outline: 2px solid $primary-color;

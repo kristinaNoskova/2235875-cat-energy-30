@@ -151,8 +151,7 @@
     z-index: -1;
     min-height: 100%;
     background-color: #414046;
-    background-image:
- linear-gradient(
+    background-image: linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
       ),
@@ -165,8 +164,25 @@
     background-position: center center;
 
     @media (min-width: $tablet-width) {
-      background-size: cover;
-      background-position: top 60% center;
+      background-image: linear-gradient(
+          rgba(104, 183, 56, 0.85) 100%,
+          rgba(104, 183, 56, 0.85) 100%
+        ),
+        image-set(
+          url("../../images/background/catalog-bg-tablet@1x.jpg") 1x,
+          url("../../images/background/catalog-bg-tablet@2x.jpg") 2x
+        );
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: linear-gradient(
+          rgba(104, 183, 56, 0.85) 100%,
+          rgba(104, 183, 56, 0.85) 100%
+        ),
+        image-set(
+          url("../../images/background/catalog-bg-desktop@1x.jpg") 1x,
+          url("../../images/background/catalog-bg-desktop@2x.jpg") 2x
+        );
     }
   }
 

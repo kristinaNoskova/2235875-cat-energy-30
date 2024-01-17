@@ -63,6 +63,7 @@
               <li class="program-form__item">
                 <label class="program-form__label" for="name">
                   <span class="program-form__name">Имя:*</span>
+                  <!-- класс program-form__input-invalid добавляет полям состояние ошибки -->
                   <input class="program-form__input input" type="text" name="name" id="name" placeholder="барсик"
                     required>
                 </label>
@@ -121,8 +122,8 @@
                 <label class="program-form__label program-form__label-icons program-form__label-icons--phone"
                   for="phone">
                   <span class="program-form__name">Телефон:*</span>
-                  <input class="program-form__input program-form__input--phone input" type="tel" name="phone" id="phone"
-                    placeholder="8 (960) 900-60-90" required>
+                  <input class="program-form__input  program-form__input--phone input" type="tel" name="phone"
+                    id="phone" placeholder="8 (960) 900-60-90" required>
                 </label>
               </li>
             </ul>
@@ -208,6 +209,7 @@
         </li>
       </ul>
       <a class="main-footer__logo-academy logo-academy link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="logo-academy__text">HTML Academy</span>
         <span class="visually-hidden">Логотип HTML Academy</span>
       </a>
     </div>

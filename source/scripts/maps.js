@@ -23,6 +23,6 @@ async function initMap() {
   marker.height = 53;
   map.addChild(new YMapMarker({ coordinates: [30.323037, 59.938631] }, marker));
   const parentImg = marker.parentElement;
-  parentImg.style.width = '57px';
+  parentImg.style.width = '113px';
   map.addChild(new YMapDefaultSchemeLayer());
 }

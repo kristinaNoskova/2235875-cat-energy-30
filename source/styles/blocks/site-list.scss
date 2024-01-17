@@ -38,6 +38,7 @@
   text-align: center;
   border-top: 1px solid $gray-bg;
   color: $basic-black;
+  transition: opacity 0.2s ease-in-out;
 
   &:focus {
     outline: 2px solid $primary-color;
@@ -60,17 +61,19 @@
   }
 
   &--current {
-    position: relative;
+    @media (min-width: $tablet-width) {
+      position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      right: 0;
-      display: block;
-      height: 2px;
-      background-color: $primary-color;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 2px;
+        background-color: $primary-color;
+      }
     }
   }
 
@@ -89,14 +92,6 @@
 .site-list__link--light {
   @media (min-width: $desktop-width) {
     color: $basic-white;
-
-    &:focus {
-      outline: 2px solid $basic-white;
-    }
-
-    &:focus:not(:focus-visible) {
-      outline: none;
-    }
 
     &:focus-visible {
       outline: 2px solid $basic-white;

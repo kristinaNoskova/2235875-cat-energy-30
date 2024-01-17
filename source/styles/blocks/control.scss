@@ -3,10 +3,20 @@
   align-items: center;
   column-gap: 15px;
   cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
 
   @media (min-width: $tablet-width) {
     column-gap: 19px;
   }
+}
+
+.control:hover .control__input {
+  border-color: $hover-radio;
+}
+
+.control:has(.control__input:disabled) {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .control__input {
@@ -23,6 +33,11 @@
   border: 1px solid $border-hover-color;
   border-radius: 50%;
   cursor: pointer;
+
+  &:disabled {
+    border-color: $hover-radio;
+    cursor: not-allowed;
+  }
 
   @media (min-width: $tablet-width) {
     width: 40px;

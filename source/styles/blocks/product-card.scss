@@ -6,8 +6,7 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 100%;
     padding: 10px 37px 40px 37px;
-    background-image:
-      linear-gradient(
+    background-image: linear-gradient(
       $basic-white 15%,
       $basic-white 15%,
       $gray-bg 15%,
@@ -77,6 +76,23 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+.product-card__link-img,
+.product-card__link-name {
+  transition: opacity 0.3s ease-in-out;
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
