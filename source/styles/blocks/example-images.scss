@@ -8,6 +8,11 @@
   @media (min-width: $tablet-width) {
     width: 560px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 14px;
+    align-self: center;
+  }
 }
 
 .example-images__comp {

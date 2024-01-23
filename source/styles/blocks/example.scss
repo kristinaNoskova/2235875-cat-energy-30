@@ -1,25 +1,26 @@
 .example {
-  padding-top: 25px;
-  padding-bottom: 40px;
+  padding-top: 53px;
+  padding-bottom: 37px;
   background-color: $gray-bg;
 
   @media (min-width: $tablet-width) {
-    background-image:
-      linear-gradient(
-      $basic-white 50%,
-      $basic-white 50%,
-      $gray-bg 50%,
+    padding-top: 53px;
+    padding-bottom: 98px;
+    background-image: linear-gradient(
+      $basic-white 61%,
+      $basic-white 61%,
+      $gray-bg 61%,
       $gray-bg 100%
     );
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 75px;
-    background-image:
-      linear-gradient(
-      $basic-white 28%,
-      $basic-white 38%,
-      $gray-bg 28%,
+    padding-bottom: 69px;
+    padding-top: 28px;
+    background-image: linear-gradient(
+      $basic-white 26%,
+      $basic-white 26%,
+      $gray-bg 26%,
       $gray-bg 100%
     );
   }
@@ -49,7 +50,6 @@
 
   @media (min-width: $desktop-width) {
     flex-grow: 1;
-    margin: 0;
   }
 }
 
@@ -61,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 63px;
+    margin-bottom: 68px;
   }
 }
 
@@ -84,17 +84,17 @@
   grid-template-columns: repeat(2, minmax(124px, 162px));
   gap: 32px;
   justify-content: center;
-  padding-bottom: 19px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     gap: 43px;
+    margin-bottom: 74px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
     justify-content: flex-start;
-    margin-bottom: 41px;
+    margin-bottom: 48px;
   }
 }
 
@@ -105,13 +105,15 @@
   align-items: center;
   justify-content: center;
   padding: 5px;
+  margin-bottom: 19px;
   min-width: 124px;
   min-height: 56px;
   border-radius: 3px;
   border: 1px solid $border-hover-color;
 
   @media (min-width: $tablet-width) {
-    height: 72px;
+    min-height: 72px;
+    margin-bottom: 10px;
   }
 }
 
@@ -141,15 +143,15 @@
   background-color: $gray-bg;
 
   @media (min-width: $tablet-width) {
-    min-width: 114px;
+    width: 91%;
+    bottom: -11px;
+    font-size: 14px;
+    line-height: 14px;
     background-color: $basic-white;
   }
 
   @media (min-width: $desktop-width) {
-    width: 91%;
     bottom: -10px;
-    font-size: 14px;
-    line-height: 14px;
     background-color: $gray-bg;
   }
 }
@@ -161,6 +163,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 174px;
+    padding-top: 7px;
     text-align: end;
     font-size: 20px;
     line-height: 29px;
@@ -168,6 +171,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: start;
+    padding-top: 0;
     max-width: none;
     width: 100%;
   }

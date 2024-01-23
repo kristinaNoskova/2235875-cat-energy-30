@@ -78,7 +78,7 @@
 }
 
 .program-form__group-contact {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   .program-form__list {
     @media (min-width: $desktop-width) {
@@ -130,6 +130,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 62px;
+      row-gap: 32px;
     }
 
     @media (min-width: $desktop-width) {
@@ -167,7 +168,10 @@
 }
 
 .program-form__label {
-  @include grid-item-form;
+  display: grid;
+  grid-template-columns: minmax(auto, max-content) minmax(173px, auto);
+  column-gap: 13px;
+  align-items: center;
   position: relative;
   font-size: 16px;
   text-transform: uppercase;
@@ -185,7 +189,7 @@
     z-index: 20;
     width: 20px;
     height: 20px;
-    right: 13px;
+    right: 16px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -231,10 +235,10 @@
 }
 
 .program-form__name {
-  max-width: 94px;
+  max-width: 170px;
 
   @media (min-width: $tablet-width) {
-    max-width: 117px;
+    max-width: 250px;
   }
 }
 

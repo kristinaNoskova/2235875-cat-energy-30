@@ -8,7 +8,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 93px;
+    padding-top: 0;
+    padding-bottom: 133px;
   }
 }
 
@@ -22,8 +23,7 @@
   z-index: -1;
   min-height: 302px;
   background-color: #414046;
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       rgba(104, 183, 56, 0.85) 100%,
       rgba(104, 183, 56, 0.85) 100%
     ),
@@ -45,8 +45,7 @@
     width: 50%;
     min-height: 694px;
     left: 50%;
-    background-image:
-      linear-gradient(
+    background-image: linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
       ),
@@ -55,6 +54,7 @@
         url("../../images/background/index-background-desktop@2x.jpg") 2x
       );
     background-position: left bottom;
+    background-size: cover;
   }
 }
 
@@ -68,8 +68,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 14px;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 41% 59%;
   }
 }
 
@@ -86,11 +85,21 @@
   @media (min-width: $tablet-width) {
     padding-left: 90px;
     margin-bottom: 40px;
-    align-self: end;
     font-size: 60px;
     line-height: 60px;
     text-align: start;
     color: $basic-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 83px;
+    padding-left: 25px;
+  }
+
+  @media (min-width: $desktop-width-extra) {
+    padding-left: 80px;
   }
 }
 
@@ -117,6 +126,11 @@
   @media (min-width: $desktop-width) {
     grid-row: 2;
     grid-column: 1;
+    padding-left: 25px;
+  }
+
+  @media (min-width: $desktop-width-extra) {
+    padding-left: 80px;
   }
 }
 
@@ -131,13 +145,16 @@
     position: relative;
     z-index: 10;
     bottom: 30px;
+    margin-bottom: -30px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-row: 1 / 4;
+    grid-row: 1 / 6;
     grid-column: 2;
+    justify-self: start;
     bottom: 0;
-    left: -30px;
+    left: -53px;
+    margin-bottom: 0;
     justify-content: flex-start;
   }
 }
@@ -158,8 +175,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 25px;
     grid-row: 3;
     grid-column: 1;
     position: static;
+  }
+
+  @media (min-width: $desktop-width-extra) {
+    margin-left: 80px;
   }
 }
