@@ -59,7 +59,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 54% 46%;
-    row-gap: 24px;
+    row-gap: 25px;
     padding: 76px 29px 59px 52px;
   }
 
@@ -96,7 +96,17 @@
     100%
   );
 
+  @media (min-width: $tablet-width) {
+    right: 26px;
+    top: 51%;
+    left: auto;
+    transform: translateY(-49%);
+  }
+
   @media (min-width: $desktop-width) {
+    right: auto;
+    left: 36px;
+    top: 94px;
     background-position: top;
   }
 }

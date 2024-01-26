@@ -38,6 +38,7 @@
   height: 2px;
   background-color: $basic-black;
   transition: all 0.3s;
+  transform: translateY(-2px);
 
   &::before,
   &::after {
@@ -73,6 +74,7 @@
     transition: bottom 0.2s cubic-bezier(0.23, 1, 0.32, 1),
       transform 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   }
+
   &::after {
     top: 0;
     transform: rotate(-45deg);
@@ -84,18 +86,13 @@
 
 @media (max-width: $mobile-width-only) {
   .main-nav--closed .main-nav__list {
-    visibility: hidden;
-    top: -10px;
-    opacity: 0;
-    transition: top 0.4s ease, opacity 0.2s ease, visibility 0.2s ease-in-out;
+    display: none;
+    transition: transform 0.4s ease;
   }
 
   .main-nav--opened .main-nav__list {
-    visibility: visible;
-    top: 100%;
-    opacity: 1;
-    transition: top 0.3s ease-in-out, opacity 0.2s ease-in-out,
-      visibility 0.2s ease-in-out;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
   }
 }
 

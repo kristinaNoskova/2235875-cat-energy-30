@@ -22,7 +22,9 @@
     z-index: 20;
     top: 95px;
     padding: 60px 74px 60px 80px;
-    min-width: 565px;
+    width: 565px;
+    max-height: 199px;
+    overflow-y: auto;
     background-color: $basic-white;
   }
 }

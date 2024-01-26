@@ -38,7 +38,7 @@
   margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: $tablet-big-width) {
@@ -124,6 +124,17 @@
   }
 }
 
+.additive__features-value {
+  @media (min-width: $tablet-width) {
+    min-width: 42px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
 .additive__button {
   width: 100%;
 
@@ -141,7 +152,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 58px 45px 47px;
+  padding: 58px 45px 45px;
   min-height: 290px;
 
   &::after {
@@ -200,7 +211,7 @@
     );
     width: 78px;
     height: 80px;
-    margin-bottom: 47px;
+    margin-bottom: 49px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;

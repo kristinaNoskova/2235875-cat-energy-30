@@ -1,7 +1,8 @@
 .map {
   width: 100%;
   height: 362px;
-  background-image: image-set(
+  background-image:
+ image-set(
     url("../../images/background/location-mobile@1x.png") 1x,
     url("../../images/background/location-mobile@2x.png") 2x
   );
@@ -11,14 +12,16 @@
 
   @media (min-width: $tablet-width) {
     height: 400px;
-    background-image: image-set(
+    background-image:
+ image-set(
       url("../../images/background/location-tablet@1x.png") 1x,
       url("../../images/background/location-tablet@2x.png") 2x
     );
   }
 
   @media (min-width: $desktop-width) {
-    background-image: image-set(
+    background-image:
+ image-set(
       url("../../images/background/location-desktop@1x.png") 1x,
       url("../../images/background/location-desktop@2x.png") 2x
     );
