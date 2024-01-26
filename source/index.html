@@ -9,6 +9,8 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="favicons/favicon180.png" />
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="manifest" href="manifest.webmanifest" />
   <script src="scripts/index.js" defer></script>
   <script src="https://api-maps.yandex.ru/v3/?apikey=d21ba5c7-4963-491b-bffc-e02dccce5e1c&lang=ru_RU" defer></script>
@@ -172,7 +174,8 @@
               <source type="image/png" width="560" height="512" media="(min-width: 768px)"
                 srcset="images/slider/slider-cat-tablet-before@1x.png 1x,images/slider/slider-cat-tablet-before@2x.png 2x" />
               <img class="example-images__before-img" src="images/slider/slider-cat-mobile-before@1x.png"
-                srcset="images/slider/slider-cat-mobile-before@2x.png 2x" alt="Фото кота до" width="280" height="256" />
+                srcset="images/slider/slider-cat-mobile-before@2x.png 2x" alt="Фото кота до" width="280" height="256"
+                loading="lazy" />
             </picture>
           </div>
           <button class="example-images__button button" type="button">
@@ -188,8 +191,8 @@
               <source type="image/png" width="560" height="512" media="(min-width: 768px)"
                 srcset="images/slider/slider-cat-tablet-after@1x.png 1x, images/slider/slider-cat-tablet-after@2x.png 2x" />
               <img class="example-images__after-img" src="images/slider/slider-cat-mobile-after@1x.png"
-                srcset="images/slider/slider-cat-mobile-after@2x.png 2x" alt="Фото кота после" width="280"
-                height="256" />
+                srcset="images/slider/slider-cat-mobile-after@2x.png 2x" alt="Фото кота после" width="280" height="256"
+                loading="lazy" />
             </picture>
           </div>
         </div>
