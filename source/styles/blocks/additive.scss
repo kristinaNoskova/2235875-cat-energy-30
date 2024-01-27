@@ -166,6 +166,7 @@
     z-index: -1;
     min-height: 100%;
     background-color: #414046;
+    /* stylelint-disable declaration-colon-newline-after */
     background-image: linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
@@ -199,6 +200,7 @@
           url("../../images/background/catalog-bg-desktop@2x.jpg") 2x
         );
     }
+    /* stylelint-enable declaration-colon-newline-after */
   }
 
   &::before {

@@ -130,6 +130,18 @@
 .works__descr {
   grid-column: 2;
 
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
     z-index: 20;

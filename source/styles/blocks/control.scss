@@ -34,6 +34,11 @@
   border-radius: 50%;
   cursor: pointer;
 
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+
   &:disabled {
     border-color: $hover-radio;
     cursor: not-allowed;
