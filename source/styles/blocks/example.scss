@@ -37,7 +37,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 36%;
   }
 }
 
@@ -55,6 +55,14 @@
 
 .example__descr {
   margin-bottom: 20px;
+
+  br {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
