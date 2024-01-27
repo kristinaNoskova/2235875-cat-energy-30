@@ -2,12 +2,31 @@
   padding: 14px 13px 13px 15px;
   font-family: $primary-font;
   font-size: 16px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $border-color;
   color: $dark-grey;
   text-transform: uppercase;
+  transition: border-color 0.3s ease-in-out;
 
   &::placeholder {
     color: $dark-grey;
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 2px solid $dark-grey;
+    outline-offset: -1px;
+  }
+
+  &:hover {
+    border-color: $border-hover-color;
+  }
+
+  &:disabled {
+    background-color: $border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet-form;
   }
 }
 

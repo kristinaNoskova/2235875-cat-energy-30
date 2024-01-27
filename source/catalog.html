@@ -10,8 +10,10 @@
   <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="favicons/favicon180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <script src="scripts/index.js" defer></script>
-  <script src="https://api-maps.yandex.ru/v3/?apikey=d21ba5c7-4963-491b-bffc-e02dccce5e1c&lang=ru_RU"></script>
+  <script src="https://api-maps.yandex.ru/v3/?apikey=d21ba5c7-4963-491b-bffc-e02dccce5e1c&lang=ru_RU" defer></script>
   <script src="scripts/maps.js" defer></script>
 </head>
 
@@ -31,14 +33,15 @@
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle button" type="button">
+          <span class="main-nav__toggle-line"></span>
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list site-list list-reset">
           <li class="site-list__item">
-            <a class="site-list__link link site-list__link--current" href="index.html">главная</a>
+            <a class="site-list__link link" href="index.html">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link link" href="catalog.html">каталог продукции</a>
+            <a class="site-list__link link site-list__link--current" href="catalog.html">каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link link" href="form.html">подбор программы</a>
@@ -58,17 +61,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/chicken-desktop@1x.webp 1x, images/product-card/chicken-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/chicken-tablet@1x.webp 1x, images/product-card/chicken-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/chicken-mobile@1x.webp 1x, images/product-card/chicken-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/chicken-desktop@1x.png 1x, images/product-card/chicken-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/chicken-tablet@1x.png 1x, images/product-card/chicken-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/chicken-mobile@1x.png"
                   srcset="images/product-card/chicken-mobile@2x.png 2x" alt="Cat Energy PRO 500 г" width="140"
-                  height="107">
+                  height="107" loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy PRO<br>500 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy PRO <br>500&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -89,17 +98,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/big-chicken-desktop@1x.webp 1x, images/product-card/big-chicken-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/big-chicken-tablet@1x.webp 1x, images/product-card/big-chicken-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/big-chicken-mobile@1x.webp 1x, images/product-card/big-chicken-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/big-chicken-desktop@1x.png 1x, images/product-card/big-chicken-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/big-chicken-tablet@1x.png 1x, images/product-card/big-chicken-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/big-chicken-mobile@1x.png"
                   srcset="images/product-card/big-chicken-mobile@2x.png 2x" alt="Cat Energy PRO 1000 г" width="140"
-                  height="107">
+                  height="107" loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy PRO<br>1000 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy PRO <br>1000&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -120,17 +135,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/fish-desktop@1x.webp 1x, images/product-card/fish-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/fish-tablet@1x.webp 1x, images/product-card/fish-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/fish-mobile@1x.webp 1x, images/product-card/fish-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/fish-desktop@1x.png 1x, images/product-card/fish-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/fish-tablet@1x.png 1x, images/product-card/fish-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/fish-mobile@1x.png"
-                  srcset="images/product-card/fish-mobile@2x.png 2x" alt="Cat Energy PRO 500 г" width="140"
-                  height="107">
+                  srcset="images/product-card/fish-mobile@2x.png 2x" alt="Cat Energy PRO 500 г" width="140" height="107"
+                  loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy PRO<br>500 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy PRO <br>500&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -151,17 +172,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/big-fish-desktop@1x.webp 1x, images/product-card/big-fish-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/big-fish-tablet@1x.webp 1x, images/product-card/big-fish-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/big-fish-mobile@1x.webp 1x, images/product-card/big-fish-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/big-fish-desktop@1x.png 1x, images/product-card/big-fish-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/big-fish-tablet@1x.png 1x, images/product-card/big-fish-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/big-fish-mobile@1x.png"
                   srcset="images/product-card/big-fish-mobile@2x.png 2x" alt="Cat Energy PRO 1000 г" width="140"
-                  height="107">
+                  height="107" loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy PRO<br>1000 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy PRO <br>1000&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -182,17 +209,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/buckwheat-desktop@1x.webp 1x, images/product-card/buckwheat-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/buckwheat-tablet@1x.webp 1x, images/product-card/buckwheat-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/buckwheat-mobile@1x.webp 1x, images/product-card/buckwheat-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/buckwheat-desktop@1x.png 1x, images/product-card/buckwheat-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/buckwheat-tablet@1x.png 1x, images/product-card/buckwheat-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/buckwheat-mobile@1x.png"
                   srcset="images/product-card/buckwheat-mobile@2x.png 2x" alt="Cat Energy sLIM 500 г" width="140"
-                  height="107">
+                  height="107" loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy sLIM<br>500 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy sLIM <br>500&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -213,17 +246,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/big-buckwheat-desktop@1x.webp 1x, images/product-card/big-buckwheat-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/big-buckwheat-tablet@1x.webp 1x, images/product-card/big-buckwheat-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/big-buckwheat-mobile@1x.webp 1x, images/product-card/big-buckwheat-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/big-buckwheat-desktop@1x.png 1x, images/product-card/big-buckwheat-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/big-buckwheat-tablet@1x.png 1x, images/product-card/big-buckwheat-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/big-buckwheat-mobile@1x.png"
                   srcset="images/product-card/big-buckwheat-mobile@2x.png 2x" alt="Cat Energy SLIM 1000 г" width="140"
-                  height="107">
+                  height="107" loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy SLIM<br>1000 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy SLIM <br>1000&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -244,17 +283,23 @@
           <article class="catalog-product__card product-card">
             <a class="product-card__link-img" href="#">
               <picture>
+                <source type="image/webp" width="169" height="210" media="(min-width: 1440px)"
+                  srcset="images/product-card/rice-desktop@1x.webp 1x, images/product-card/rice-desktop@2x.webp 2x">
+                <source type="image/webp" width="200" height="210" media="(min-width: 500px)"
+                  srcset="images/product-card/rice-tablet@1x.webp 1x, images/product-card/rice-tablet@2x.webp 2x">
+                <source type="image/webp" width="140" height="107"
+                  srcset="images/product-card/rice-mobile@1x.webp 1x, images/product-card/rice-mobile@2x.webp 2x">
                 <source type="image/png" width="169" height="210" media="(min-width: 1440px)"
                   srcset="images/product-card/rice-desktop@1x.png 1x, images/product-card/rice-desktop@2x.png 2x">
-                <source type="image/png" width="200" height="210" media="(min-width: 768px)"
+                <source type="image/png" width="200" height="210" media="(min-width: 500px)"
                   srcset="images/product-card/rice-tablet@1x.png 1x, images/product-card/rice-tablet@2x.png 2x">
                 <img class="product-card__img" src="images/product-card/rice-mobile@1x.png"
                   srcset="images/product-card/rice-mobile@2x.png 2x" alt="Cat Energy slim 500 г" width="140"
-                  height="107">
+                  height="107" loading="lazy">
               </picture>
             </a>
             <a class="product-card__link-name link" href="#">
-              <h3 class="product-card__name subtitle">Cat Energy slim<br>500 г</h3>
+              <h3 class="product-card__name subtitle">Cat Energy slim <br>500&nbsp;г</h3>
             </a>
             <ul class="product-card__features list-reset">
               <li class="product-card__features-item">
@@ -283,7 +328,7 @@
     </section>
     <section class="additive">
       <div class="container">
-        <h2 class="additive__title title title--line">Дополнительные товары</h2>
+        <h2 class="additive__title title title--line title--line-catalog">Дополнительные товары</h2>
         <div class="additive__wrapper">
           <ul class="additive__list list-reset">
             <li class="additive__item">
@@ -320,12 +365,12 @@
             </li>
           </ul>
           <div class="additive__promo">
-            <p class="additive__promo-descr descr">Закажите все<br>и получите чехол для кота в подарок!</p>
+            <p class="additive__promo-descr descr">Закажите все <br>и получите чехол для <br>кота в подарок!</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--bg">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="container">
         <div class="contacts__wrapper-address">
@@ -365,6 +410,7 @@
         </li>
       </ul>
       <a class="main-footer__logo-academy logo-academy link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="logo-academy__text">HTML Academy</span>
         <span class="visually-hidden">Логотип HTML Academy</span>
       </a>
     </div>

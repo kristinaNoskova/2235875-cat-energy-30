@@ -23,9 +23,7 @@
   background-color: $bg-color;
 }
 
-@mixin grid-item-form {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  column-gap: 13px;
-  align-items: center;
+@mixin fonts-tablet-form {
+  font-size: 20px;
+  line-height: normal;
 }

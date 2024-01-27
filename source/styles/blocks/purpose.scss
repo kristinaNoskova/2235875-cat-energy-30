@@ -11,6 +11,10 @@
   flex-wrap: wrap;
   gap: 20px;
 
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
   @media (min-width: $desktop-width) {
     gap: 80px;
   }
@@ -18,65 +22,97 @@
 
 .purpose__item {
   display: grid;
-  grid-template-columns: 60px 1fr;
-  column-gap: 11px;
-  row-gap: 23px;
+  grid-template-columns: 65px 1fr;
+  column-gap: 6px;
+  row-gap: 25px;
+  position: relative;
   align-items: center;
-  padding: 23px 20px 20px 20px;
+  padding: 32px 20px 22px;
   width: 100%;
   background-color: $basic-grey;
 
-  &::before {
+  &::after {
     content: "";
+    position: absolute;
+    top: 24px;
+    left: 5px;
     width: 80px;
     height: 50px;
-    justify-self: center;
-    transform: translateX(-5px);
 
     @media (min-width: $tablet-width) {
-      grid-column: 2;
-      grid-row: 1 / 3;
-      width: 100%;
-      height: 200px;
+      width: 270px;
+      height: 215px;
+      right: 29px;
+      top: 50%;
+      left: auto;
+      transform: translateY(-50%);
     }
 
     @media (min-width: $desktop-width) {
-      grid-column: 1;
-      grid-row: 1;
-      height: 100px;
+      width: 134px;
+      height: 106px;
+      right: auto;
+      left: 36px;
+      top: 94px;
     }
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 60% 40%;
-    row-gap: 24px;
-    padding: 67px 29px 57px 52px;
+    grid-template-columns: 54% 46%;
+    row-gap: 25px;
+    padding: 76px 29px 59px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 134px 1fr;
+    grid-template-columns: 137px 1fr;
+    padding: 76px 29px 63px 52px;
     width: calc((100% - 80px) / 2);
-    gap: 47px;
+    column-gap: 25px;
+    row-gap: 0;
   }
 }
 
-.purpose__item--slim::before {
+.purpose__item--slim::after {
   @include bg-icon(
     transparent,
     url("../../images/icons/stack.svg#cat-slim"),
     100%
   );
+
+  @media (min-width: $tablet-width) {
+    background-size: 215px 210px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 100%;
+    background-position: top;
+  }
 }
 
-.purpose__item--mass::before {
+.purpose__item--mass::after {
   @include bg-icon(
     transparent,
     url("../../images/icons/stack.svg#cat-puma"),
     100%
   );
+
+  @media (min-width: $tablet-width) {
+    right: 26px;
+    top: 51%;
+    left: auto;
+    transform: translateY(-49%);
+  }
+
+  @media (min-width: $desktop-width) {
+    right: auto;
+    left: 36px;
+    top: 94px;
+    background-position: top;
+  }
 }
 
 .purpose__title {
+  grid-column: 2;
   font-size: 24px;
   line-height: 37px;
 
@@ -89,6 +125,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2;
+    margin-bottom: 73px;
   }
 }
 
@@ -120,48 +157,79 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
+    margin-bottom: 33px;
   }
 }
 
 .purpose__link {
   grid-column: 1/-1;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(auto, max-content) 32px;
   align-items: center;
-  width: 58%;
   margin-top: 20px;
   gap: 15px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $basic-black;
+  word-break: break-all;
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
     grid-row: 3;
-    width: 48%;
+    gap: 26px;
+    min-width: 165px;
+    max-width: 100%;
+    margin-top: 26px;
     font-size: 20px;
     line-height: normal;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
-    width: 36%;
+    margin-top: 0;
+    line-height: 20px;
   }
 
   &:focus {
-    outline: 2px solid $primary-color;
+    outline: 2px solid $basic-black;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-black;
   }
 
   &::after {
     content: "";
+    grid-column: 2;
+    grid-row: 1;
     display: block;
     width: 32px;
-    height: 10px;
+    height: 12px;
     background: url("../../images/icons/stack.svg#icon_arrow") no-repeat center
       center;
+    transition: transform 0.3s ease-in-out;
   }
-}
 
-.purpose__link:hover::after {
-  // transform: scaleX(1.5);
+  &::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 1;
+    display: block;
+    width: 17px;
+    height: 2px;
+    background-color: $basic-black;
+  }
+
+  &:hover::after {
+    transform: translateX(6px);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

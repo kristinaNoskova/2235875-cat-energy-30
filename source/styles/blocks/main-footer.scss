@@ -16,16 +16,28 @@
     padding-top: 59px;
     padding-bottom: 55px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 68px;
+  }
 }
 
 .main-footer__logo {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   text-align: center;
   border-bottom: 1px solid $border-hover-color;
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 
   @media (min-width: $tablet-width) {

@@ -4,7 +4,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
+  word-wrap: break-word;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title--line {
@@ -26,10 +32,14 @@
     top: 0.7em;
     box-shadow: 100vw 0 0 $primary-color;
     background-color: $primary-color;
+
+    @media (min-width: $tablet-width) {
+      top: 0.6em;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: 0;
+    margin-left: -40px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -38,5 +48,15 @@
     margin-left: -40px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+}
+
+.title--line-catalog {
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
   }
 }

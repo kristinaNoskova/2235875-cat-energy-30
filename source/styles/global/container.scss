@@ -1,5 +1,7 @@
 .container {
   min-width: 320px;
+  max-width: 1330px;
+  width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 
@@ -8,7 +10,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: 1330px;
+    padding: 0 55px;
+  }
+}
+
+.container--form {
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding: 0 55px;
   }
 }

@@ -1,21 +1,24 @@
 .site-list {
   position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   z-index: 20;
   display: none;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  border-bottom: 1px solid $gray-bg;
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     position: static;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 37px;
+    gap: 32px;
+    border: none;
     background-color: transparent;
   }
 
@@ -26,26 +29,96 @@
 
 .site-list__link {
   display: inline-block;
+  width: 100%;
+  padding: 22px 15px 24px 15px;
   font-family: $primary-font;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 22px 15px 24px 15px;
+  text-align: center;
+  border-top: 1px solid $gray-bg;
   color: $basic-black;
+  transition: opacity 0.2s ease-in-out;
 
   &:focus {
     outline: 2px solid $primary-color;
   }
 
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
+    position: relative;
     padding: 0;
+    padding-right: 3px;
     font-size: 18px;
     line-height: 24px;
     border: none;
   }
 
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      display: block;
+      height: 2px;
+      background-color: $primary-color;
+      transition: width 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      bottom: -12px;
+    }
+  }
+
+  &:hover::before {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+  }
+
   @media (min-width: $desktop-width) {
+    padding: 0;
     font-size: 20px;
+  }
+}
+
+.site-list__link--current {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: block;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      bottom: -12px;
+    }
   }
 }
 
@@ -53,8 +126,28 @@
   @media (min-width: $desktop-width) {
     color: $basic-white;
 
-    &:focus {
+    &:focus-visible {
       outline: 2px solid $basic-white;
     }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-list__link--light.site-list__link--current::before {
+  @media (min-width: $desktop-width) {
+    background-color: $basic-white;
+  }
+}
+
+.site-list__link--light.site-list__link::before {
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
   }
 }

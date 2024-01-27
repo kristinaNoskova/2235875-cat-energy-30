@@ -1,6 +1,28 @@
+.program {
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
+}
+
 .program__caption {
   margin-bottom: 37px;
   font-size: 14px;
   line-height: 18px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 68px;
+  }
 }

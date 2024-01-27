@@ -1,18 +1,40 @@
 .map {
   width: 100%;
   height: 362px;
+  background-image:
+ image-set(
+    url("../../images/background/location-mobile@1x.png") 1x,
+    url("../../images/background/location-mobile@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media (min-width: $tablet-width) {
     height: 400px;
+    background-image:
+ image-set(
+      url("../../images/background/location-tablet@1x.png") 1x,
+      url("../../images/background/location-tablet@2x.png") 2x
+    );
   }
 
-  // @media (min-width: $desktop-width) {
-  //   position: relative;
-  // }
+  @media (min-width: $desktop-width) {
+    background-image:
+ image-set(
+      url("../../images/background/location-desktop@1x.png") 1x,
+      url("../../images/background/location-desktop@2x.png") 2x
+    );
+  }
 }
 
 .map__marker {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 57px;
+  height: 57px;
+
+  @media (min-width: $tablet-width) {
+    width: 113px;
+    height: 104px;
+  }
 }

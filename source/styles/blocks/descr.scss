@@ -1,6 +1,7 @@
 .descr {
   margin: 0;
   font-family: $secondary-font;
+  word-wrap: break-word;
   color: $dark-grey;
 
   @media (min-width: $tablet-width) {

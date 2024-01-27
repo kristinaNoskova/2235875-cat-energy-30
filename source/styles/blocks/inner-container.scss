@@ -12,13 +12,23 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1330px;
-    padding: 21px 55px 0;
+    padding: 47px 55px 0;
   }
 }
 
 .inner-container__header--form {
   padding-bottom: 34px;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 70px 0;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1330px;
+    padding: 47px 55px 0;
+  }
 }
 
 .inner-container__title {

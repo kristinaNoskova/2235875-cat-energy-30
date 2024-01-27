@@ -3,6 +3,20 @@
   align-items: center;
   column-gap: 15px;
   cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 19px;
+  }
+}
+
+.control:hover .control__input {
+  border-color: $hover-radio;
+}
+
+.control:has(.control__input:disabled) {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .control__input {
@@ -11,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   margin: 0;
   padding: 0;
   width: 30px;
@@ -18,6 +33,16 @@
   border: 1px solid $border-hover-color;
   border-radius: 50%;
   cursor: pointer;
+
+  &:disabled {
+    border-color: $hover-radio;
+    cursor: not-allowed;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .control__input[type="radio"]:checked::before {
@@ -30,6 +55,11 @@
   height: 13px;
   border-radius: 50%;
   background-color: $primary-color;
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .control__input[type="checkbox"] {
@@ -38,6 +68,7 @@
 
 .control__input[type="checkbox"]:checked::before {
   content: "";
+
   @include bg-icon(
     transparent,
     url("../../images/icons/stack.svg#tick"),
@@ -48,6 +79,12 @@
 }
 
 .control__label {
+  max-width: 300px;
   font-size: 16px;
+  word-wrap: break-word;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include fonts-tablet-form;
+  }
 }
