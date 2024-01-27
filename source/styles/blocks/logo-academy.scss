@@ -5,6 +5,7 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   &::after {
     @include icons-mask(
@@ -15,18 +16,27 @@
     width: 27px;
     height: 34px;
     flex-shrink: 0;
+    transition: background-color 0.3s ease-in-out;
   }
 
   &:focus-visible {
     outline: 2px solid $primary-color;
+    outline-offset: 4px;
+  }
+
+  &:focus-visible::after {
+    background-color: $primary-color;
   }
 
   &:hover::after {
     background-color: $primary-color;
   }
 
-  &:active::before {
+  &:active::after {
     background-color: $primary-color;
+  }
+
+  &:active {
     opacity: 0.3;
   }
 

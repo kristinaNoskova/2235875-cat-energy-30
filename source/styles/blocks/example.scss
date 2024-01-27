@@ -6,6 +6,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 53px;
     padding-bottom: 98px;
+    /* stylelint-disable declaration-colon-newline-after */
     background-image: linear-gradient(
       $basic-white 57.5%,
       $gray-bg 57.5%,
@@ -22,6 +23,7 @@
       $gray-bg 100%
     );
   }
+  /* stylelint-enable declaration-colon-newline-after */
 }
 
 .example .container {
@@ -35,7 +37,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 36%;
   }
 }
 
@@ -53,6 +55,14 @@
 
 .example__descr {
   margin-bottom: 20px;
+
+  br {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
