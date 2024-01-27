@@ -24,8 +24,8 @@
   z-index: -1;
   min-height: 302px;
   background-color: #414046;
-  /* stylelint-disable declaration-colon-newline-after */
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       rgba(104, 183, 56, 0.85) 63%,
       rgba(104, 183, 56, 0.85) 63%,
       $basic-white 63%,
@@ -35,7 +35,6 @@
       url("../../images/background/index-background-mobile@1x.jpg") 1x,
       url("../../images/background/index-background-mobile@2x.jpg") 2x
     );
-  /* stylelint-enable declaration-colon-newline-after */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -51,8 +50,8 @@
     min-height: 694px;
     bottom: auto;
     left: 50%;
-    /* stylelint-disable declaration-colon-newline-after */
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
       ),
@@ -60,7 +59,6 @@
         url("../../images/background/index-background-desktop@1x.jpg") 1x,
         url("../../images/background/index-background-desktop@2x.jpg") 2x
       );
-    /* stylelint-enable declaration-colon-newline-after */
     background-position: left bottom;
     background-size: cover;
   }

@@ -6,14 +6,13 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 100%;
     padding: 10px 37px 40px 37px;
-    /* stylelint-disable declaration-colon-newline-after */
-    background-image: linear-gradient(
-      $basic-white 16%,
-      $basic-white 16%,
-      $gray-bg 16%,
-      $gray-bg 100%
-    );
-    /* stylelint-enable declaration-colon-newline-after */
+    background-image:
+      linear-gradient(
+        $basic-white 16%,
+        $basic-white 16%,
+        $gray-bg 16%,
+        $gray-bg 100%
+      );
   }
 }
 
