@@ -24,7 +24,8 @@
   z-index: -1;
   min-height: 302px;
   background-color: #414046;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       rgba(104, 183, 56, 0.85) 63%,
       rgba(104, 183, 56, 0.85) 63%,
       $basic-white 63%,
@@ -49,7 +50,8 @@
     min-height: 694px;
     bottom: auto;
     left: 50%;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
       ),
@@ -147,7 +149,6 @@
   @media (min-width: $tablet-width) {
     grid-row: 3 / 4;
     grid-column: 1;
-    margin-bottom: 0;
     position: relative;
     z-index: 10;
     bottom: 30px;

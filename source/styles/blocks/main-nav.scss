@@ -53,13 +53,15 @@
 
   &::before {
     bottom: 8px;
-    transition: bottom 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    transition:
+      bottom 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1),
       transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   &::after {
     top: 8px;
-    transition: top 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    transition:
+      top 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1),
       transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
@@ -71,7 +73,8 @@
     bottom: 0;
     transform: rotate(45deg);
     background-color: $basic-black;
-    transition: bottom 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    transition:
+      bottom 0.2s cubic-bezier(0.23, 1, 0.32, 1),
       transform 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -79,7 +82,8 @@
     top: 0;
     transform: rotate(-45deg);
     background-color: $basic-black;
-    transition: top 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+    transition:
+      top 0.2s cubic-bezier(0.23, 1, 0.32, 1),
       transform 0.2s 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   }
 }

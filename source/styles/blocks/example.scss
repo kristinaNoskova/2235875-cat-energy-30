@@ -6,21 +6,23 @@
   @media (min-width: $tablet-width) {
     padding-top: 53px;
     padding-bottom: 98px;
-    background-image: linear-gradient(
-      $basic-white 57.5%,
-      $gray-bg 57.5%,
-      $gray-bg 100%
-    );
+    background-image:
+      linear-gradient(
+        $basic-white 57.5%,
+        $gray-bg 57.5%,
+        $gray-bg 100%
+      );
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 69px;
     padding-top: 28px;
-    background-image: linear-gradient(
-      $basic-white 26%,
-      $gray-bg 26%,
-      $gray-bg 100%
-    );
+    background-image:
+      linear-gradient(
+        $basic-white 26%,
+        $gray-bg 26%,
+        $gray-bg 100%
+      );
   }
 }
 

@@ -166,7 +166,8 @@
     z-index: -1;
     min-height: 100%;
     background-color: #414046;
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         rgba(104, 183, 56, 0.85) 100%,
         rgba(104, 183, 56, 0.85) 100%
       ),
@@ -179,7 +180,8 @@
     background-position: center center;
 
     @media (min-width: $tablet-width) {
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           rgba(104, 183, 56, 0.85) 100%,
           rgba(104, 183, 56, 0.85) 100%
         ),
@@ -190,7 +192,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           rgba(104, 183, 56, 0.85) 100%,
           rgba(104, 183, 56, 0.85) 100%
         ),
