@@ -51,6 +51,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 80px 1fr;
+    grid-template-rows: 128px 1fr;
     width: calc((100% - 134px) / 2);
     column-gap: 37px;
     row-gap: 31px;

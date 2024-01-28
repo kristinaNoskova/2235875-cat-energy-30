@@ -5,13 +5,15 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 100%;
+    grid-auto-rows: auto 1fr auto auto;
+    align-items: start;
     padding: 10px 37px 40px 37px;
     background-image:
       linear-gradient(
         $basic-white 16%,
         $basic-white 16%,
-        $gray-bg 16%,
-        $gray-bg 100%
+        $basic-grey 16%,
+        $basic-grey 100%
       );
   }
 }
